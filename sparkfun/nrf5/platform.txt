@@ -93,7 +93,7 @@ recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf
 ## Create Bootloader ZIP File
 recipe.objcopy.zip.pattern={runtime.tools.nrfutil-0.5.2-SFE.path}/nrfutil dfu genpkg --application "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.zip"
 recipe.objcopy.zip.pattern.windows={runtime.tools.nrfutil-0.5.2-SFE.path}/dist/nrfutil.exe dfu genpkg --application "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.zip"
-recipe.objcopy.zip.pattern.macosx={runtime.tools.nrfutil-0.5.2-SFE.path}/dist/nrfutil dfu genpkg --application "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.zip"
+recipe.objcopy.zip.pattern.macosx=/usr/local/bin/nrfutil dfu genpkg --application "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.zip"
 recipe.objcopy.zip.pattern.linux={runtime.tools.nrfutil-0.5.2-SFE.path}/dist/nrfutil dfu genpkg --application "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.zip"
 
 ## Save bin
@@ -142,7 +142,9 @@ tools.openocd.bootloader.pattern="{path}/{cmd}" {bootloader.verbose} -f interfac
 #
 
 tools.nrfutil.path={runtime.tools.nrfutil-0.5.2-SFE.path}
+tools.nrfutil.path.macosx=/usr/local/bin/
 tools.nrfutil.cmd=dist/nrfutil
+tools.nrfutil.cmd.macosx=nrfutil
 tools.nrfutil.cmd.windows=dist/nrfutil.exe
 
 tools.nrfutil.upload.params.verbose=--verbose
