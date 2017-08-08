@@ -380,7 +380,7 @@ SparkFunNRF52.menu.softdevice.s132=S132
 SparkFunNRF52.menu.softdevice.s132.softdevice=s132
 SparkFunNRF52.menu.softdevice.s132.softdeviceversion=2.0.1
 SparkFunNRF52.menu.softdevice.s132.upload.maximum_size=409600
-SparkFunNRF52.menu.softdevice.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132 -DBLE_GATTS_ATTR_TAB_SIZE=0x640
+SparkFunNRF52.menu.softdevice.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132 -DBLE_GATTS_ATTR_TAB_SIZE=0x7D0
 SparkFunNRF52.menu.softdevice.s132.build.ldscript=armgcc_s132_nrf52832_xxaa.ld
 
 SparkFunNRF52.menu.lfclk.lfxo=Crystal Oscillator
