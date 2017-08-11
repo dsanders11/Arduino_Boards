@@ -93,9 +93,9 @@ uint8_t TwoWire::requestFrom(uint8_t address, size_t quantity, bool stopBit)
   {
     return 0;
   }
-  if (quantity > SERIAL_BUFFER_SIZE)
+  if (quantity > SERIAL_BUFFER_SIZE - 1)
   {
-    quantity = SERIAL_BUFFER_SIZE;
+    quantity = SERIAL_BUFFER_SIZE - 1;
   }
 
   size_t byteRead = 0;
